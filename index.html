@@ -18,21 +18,23 @@
             <p class="title">Lorem Ipsum</p>
             <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut dolore minima perferendis, 
             ea necessitatibus suscipit at eaque, culpa dicta maiores temporibus voluptate dolorum quam voluptas cumque </p>
-            <button class="btn" id="buttonOpen">Button</button>
+            <a class="btn" id="buttonOpen" href="#" data-num="plus">Button</a>
         </div>
     </div>
-    <div class="popup">
+    <div class="popup hide" id="popup1">
         <div class="popup_container">
-            <div class="popup_content">
+            <div class="popup_content" id="popupContent">
                 <div class="icons">
-                    <i class="fa fa-times" id="buttonClose"></i>
+                    <div id="buttonClose"><i class="fa fa-times"></i></div>
                 </div>
                 <div class="alert">
                     <p class="AlertTitle">Alert!</p>
-                    <p class="AlertText">You have clicked <span>X times </span>to related button</p>
+                    <p class="AlertText">You have clicked <span><label id="InputValue">0</label> times </span>to related button</p>
                 </div>
+                <button class="btn_reset hide" id="resetBtn">Reset</button>
             </div>
         </div>
     </div>
+    <script src="src/js/main.js"></script>
 </body>
 </html>

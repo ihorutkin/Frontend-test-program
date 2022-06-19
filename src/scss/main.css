@@ -55,6 +55,7 @@ body {
   position: absolute;
   padding: 16px 40px;
   border: none;
+  text-decoration: none;
   border-radius: 32px;
   width: 128px;
   height: 48px;
@@ -65,6 +66,15 @@ body {
   line-height: 16px;
   top: 202px;
   left: 0px;
+  cursor: pointer;
+}
+
+.active {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 .popup {
@@ -93,6 +103,7 @@ body {
   top: 46px;
   right: 46px;
   font-size: 12px;
+  cursor: pointer;
 }
 .popup .popup_container .popup_content .alert {
   position: relative;
@@ -117,4 +128,63 @@ body {
 }
 .popup .popup_container .popup_content .alert .AlertText span {
   font-weight: bold;
+}
+.popup .popup_container .popup_content .btn_reset {
+  position: absolute;
+  right: 46px;
+  bottom: 46px;
+  width: 100px;
+  height: 40px;
+  background: #d13838;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  transition: all .3s linear;
+}
+.popup .popup_container .popup_content .btn_reset:hover {
+  background: #fff;
+  color: #d13838;
+  border: 2px solid #d13838;
+  transition: all .3s linear;
+  transform: scale(1.1);
+}
+
+@media (max-width: 1200px) {
+  .container {
+    position: absolute;
+    left: -100px;
+  }
+}
+@media (max-width: 1075px) {
+  .container {
+    position: absolute;
+    left: -175px;
+  }
+}
+@media (max-width: 990px) {
+  .container {
+    width: 100%;
+    left: 0;
+  }
+  .container .image {
+    position: relative;
+    width: 100%;
+    left: calc(50% - 505px/2);
+  }
+  .container .content {
+    position: relative;
+    width: 100%;
+    left: 0;
+    padding: 0 10px;
+    text-align: center;
+  }
+  .container .content .title {
+    width: 100%;
+    text-align: center;
+  }
+  .container .content .btn {
+    width: 200px;
+    left: calc(50% - 100px);
+  }
 }
